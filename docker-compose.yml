@@ -1,4 +1,4 @@
 version: '3'
 services:
   web:
-    image: jmerle/personal-website:latest
+    image: jmerle/personal-website
