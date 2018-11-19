@@ -7,6 +7,17 @@ services:
       traefik.enable: true
       traefik.frontend.rule: "Host:jaspervanmerle.com"
     restart: always
+  redirect:
+    image: schmunk42/nginx-redirect
+    environment:
+      - SERVER_REDIRECT=jaspervanmerle.com
+      - SERVER_REDIRECT_CODE=302
+    networks:
+      - web
+    labels:
+      traefik.enable: true
+      traefik.frontend.rule: "Host:www.jaspervanmerle.com,jaspervanmerle.nl,www.jaspervanmerle.nl,jmerle.me,www.jmerle.me"
+    restart: always
 networks:
   web:
     external: true
