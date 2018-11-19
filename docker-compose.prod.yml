@@ -1,6 +1,12 @@
 version: '3'
 services:
   web:
-    ports:
-      - "80:80"
+    networks:
+      - web
+    labels:
+      traefik.enable: true
+      traefik.frontend.rule: "Host:jaspervanmerle.com"
     restart: always
+networks:
+  web:
+    external: true
