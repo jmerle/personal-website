@@ -7,7 +7,7 @@ services:
       traefik.enable: true
       traefik.frontend.rule: "Host:jaspervanmerle.com,www.jaspervanmerle.com"
       com.centurylinklabs.watchtower.enable: true
-    restart: always
+    restart: unless-stopped
 networks:
   web:
     external: true
