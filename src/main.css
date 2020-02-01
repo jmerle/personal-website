@@ -1,0 +1,57 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.box {
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid black;
+  max-width: 500px;
+}
+
+.item {
+  display: block;
+  padding: 15px;
+
+  color: white;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+a, a:hover, a:active, a:visited {
+  color: white;
+}
+
+.name {
+  background: black;
+}
+
+.github {
+  background: #333;
+}
+
+.linkedin {
+  background: #0077b5;
+}
+
+.email {
+  background: #ea4335;
+}
