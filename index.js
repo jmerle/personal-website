@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8080;
 
 fastify.register(require('fastify-static'), {
   root: path.resolve(__dirname, 'static'),
-}).listen(PORT, err => {
+}).listen(PORT, '0.0.0.0', err => {
   if (err) {
     throw err;
   }
