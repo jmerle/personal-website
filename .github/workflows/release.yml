@@ -16,6 +16,6 @@ jobs:
       - name: Deploy to Dokku
         uses: vitalyliber/dokku-github-action@v4.0
         env:
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY: ${{ secrets.SSH_KEY }}
           HOST: jmerle.dev
           PROJECT: personal-website
