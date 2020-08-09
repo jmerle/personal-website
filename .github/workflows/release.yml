@@ -13,8 +13,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Configure SSH key
-        run: echo TODO
-
-      - name: Push to Dokku
-        run: echo TODO
+      - name: Deploy to Dokku
+        uses: vitalyliber/dokku-github-action@v4.0
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          HOST: jmerle.dev
+          PROJECT: personal-website

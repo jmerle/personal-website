@@ -10,5 +10,5 @@ fastify.register(require('fastify-static'), {
     throw err;
   }
 
-  console.log(`Running on port ${PORT}`);
+  console.log(`Running on port http://0.0.0.0:${PORT}`);
 });
