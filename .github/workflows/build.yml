@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Build and push Docker image
-        uses: dokku/build-push-action@v2
+        uses: docker/build-push-action@v2
         with:
           push: true
           tags: jmerle/personal-website:latest
