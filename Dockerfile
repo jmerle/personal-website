@@ -1,3 +1,4 @@
-FROM nginx:1.22.1
+FROM caddy:2.10.2
 
-ADD ./src /usr/share/nginx/html
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY src /app
